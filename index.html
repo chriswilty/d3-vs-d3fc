@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>d3 vs d3fc: a maybe biased comparison</title>
+    <script src="https://unpkg.com/d3"></script>
+    <script src="https://unpkg.com/d3fc"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+        .container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+        .d3, .fc {
+            font-family: sans-serif;
+            margin: 32px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            padding: 8px;
+            max-width: 600px;
+            flex: 1 1 auto;
+        }
+        .d3 { margin-right: 16px; }
+        .fc { margin-left: 16px; }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <div class="d3"></div>
+      <div class="fc"></div>
+  </div>
+  <script type="application/javascript">
+      const generator = fc.randomGeometricBrownianMotion().steps(11);
+      const dateFormatter = d3.timeFormat('%b');
+      const valueFormatter = d3.format('$.0f');
+      const data = {
+          targets: [{
+              name: 'low',
+              value: 4.5
+          }, {
+              name: 'high',
+              value: 7.2
+          }],
+          sales: generator(1).map((d, i) => ({
+              month: dateFormatter(new Date(0, i + 1, 0)),
+              sales: d + i / 2
+          }))
+      };
+
+      // d3
+      const d3Chart = selection => {
+          const width = parseInt(selection.style('width'));
+          const height = parseInt(selection.style('height'));
+          const margin = { top: 30, right: 60, bottom: 50, left: 0 };
+
+          const xScale = d3.scaleBand()
+              .domain(d3.range(selection.datum().length))
+              .rangeRound([margin.left, width - margin.right])
+              .padding(0.2);
+          const yScale = d3.scaleLinear()
+              .domain([0, d3.max(selection.datum(), d => d.sales) * 1.2]).nice()
+              .range([height - margin.bottom, margin.top]);
+
+          const xAxis = g => g
+              .attr('transform', `translate(0, ${yScale.range()[0]})`)
+              .call(d3.axisBottom(xScale).tickFormat(i => selection.datum()[i].month).tickSizeOuter(0))
+              .call(g => g.select('.domain').attr('stroke-width', '1.5'));
+          const yAxis = g => g
+              .attr('transform', `translate(${width - margin.right}, 0)`)
+              .call(d3.axisRight(yScale).ticks(5, valueFormatter))
+              .call(g => g.select('.domain').attr('stroke-width', '1.5'))
+              .call(g => g.append('text')
+                  .attr('x', margin.right + 5)
+                  .attr('y', (height) / 2)
+                  .attr('fill', 'currentColor')
+                  .attr('text-anchor', 'middle')
+                  .attr('transform', `rotate(-90, ${margin.right - 5}, ${height / 2})`)
+                  .attr('font-size', '0.75rem')
+                  .text('Sales (millions)')
+              );
+
+          const svg = selection.append('svg').attr('viewBox', [0, 0, width, height]);
+          svg.append('text')
+              .attr('x', `${width / 2}`)
+              .attr('y', `${margin.top / 2}`)
+              .attr('fill', 'currentColor')
+              .attr('text-anchor', 'middle')
+              .text('2019 Cumulative Sales');
+          svg.append('g')
+                .attr('fill', '#999')
+              .selectAll('rect')
+              .data(selection.datum())
+              .join('rect')
+                .attr('x', (_,i) => xScale(i))
+                .attr('y', d => yScale(d.sales))
+                .attr('height', d => yScale(0) - yScale(d.sales))
+                .attr('width', xScale.bandwidth());
+          svg.append('g').call(xAxis);
+          svg.append('g').call(yAxis);
+      };
+      d3.select('.d3').datum(data.sales).call(d3Chart);
+      // end
+
+      // d3fc
+      const yExtent = fc.extentLinear()
+          .include([0])
+          .pad([0, 0.2])
+          .accessors([d => d.sales]);
+      const bar = fc.autoBandwidth(fc.seriesSvgBar())
+          .crossValue(d => d.month)
+          .mainValue(d => d.sales)
+          .align('left');
+      const fcChart = fc.chartCartesian(d3.scaleBand(), d3.scaleLinear())
+          .chartLabel('2019 Cumulative Sales')
+          .xDomain(data.sales.map(d => d.month))
+          .yDomain(yExtent(data.sales))
+          .xPadding(0.2)
+          .yTicks(5, valueFormatter)
+          .yLabel('Sales (millions)')
+          .decorate(el => el.select('.y-label').style('font-size', '0.75rem'))
+          .yNice()
+          .svgPlotArea(bar);
+      d3.select('.fc').datum(data.sales).call(fcChart);
+      // end
+  </script>
+</body>
+</html>
