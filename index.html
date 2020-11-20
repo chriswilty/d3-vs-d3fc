@@ -54,6 +54,9 @@
               sales: d + i / 2
           }))
       };
+      const barFill = selection => selection
+          .style('fill', d => d.sales >= data.targets.find(t => t.name === 'low').value ? '#0c0' : 'inherit');
+      const barColour = targets => d => d.sales >= targets.find(t => t.name === 'low').value ? '#0c0' : 'inherit';
 
       // d3
       const d3Chart = selection => {
@@ -62,16 +65,16 @@
           const margin = { top: 30, right: 60, bottom: 50, left: 0 };
 
           const xScale = d3.scaleBand()
-              .domain(d3.range(selection.datum().length))
+              .domain(d3.range(selection.datum().sales.length))
               .rangeRound([margin.left, width - margin.right])
               .padding(0.2);
           const yScale = d3.scaleLinear()
-              .domain([0, d3.max(selection.datum(), d => d.sales) * 1.2]).nice()
+              .domain([0, d3.max(selection.datum().sales, d => d.sales) * 1.2]).nice()
               .range([height - margin.bottom, margin.top]);
 
           const xAxis = g => g
               .attr('transform', `translate(0, ${yScale.range()[0]})`)
-              .call(d3.axisBottom(xScale).tickFormat(i => selection.datum()[i].month).tickSizeOuter(0))
+              .call(d3.axisBottom(xScale).tickFormat(i => selection.datum().sales[i].month).tickSizeOuter(0))
               .call(g => g.select('.domain').attr('stroke-width', '1.5'));
           const yAxis = g => g
               .attr('transform', `translate(${width - margin.right}, 0)`)
@@ -97,17 +100,18 @@
           svg.append('g')
                 .attr('fill', '#999')
               .selectAll('rect')
-              .data(selection.datum())
+              .data(selection.datum().sales)
               .join('rect')
                 .attr('x', (_,i) => xScale(i))
                 .attr('y', d => yScale(d.sales))
                 .attr('height', d => yScale(0) - yScale(d.sales))
-                .attr('width', xScale.bandwidth());
+                .attr('width', xScale.bandwidth())
+                .attr('fill', barColour(selection.datum().targets));
           svg.append('g').call(xAxis);
           svg.append('g').call(yAxis);
       };
-      d3.select('.d3').datum(data.sales).call(d3Chart);
-      // end
+      d3.select('.d3').datum(data).call(d3Chart);
+      // end d3
 
       // d3fc
       const yExtent = fc.extentLinear()
@@ -117,19 +121,33 @@
       const bar = fc.autoBandwidth(fc.seriesSvgBar())
           .crossValue(d => d.month)
           .mainValue(d => d.sales)
-          .align('left');
+          .align('left')
+          .decorate(selection => selection.select('.bar > path').style('fill', barColour(data.targets)));
+      const boundLine = fc.annotationSvgLine()
+          .value(d => d.value)
+          .decorate(selection => {
+              selection.enter().style('font-size', '0.75rem');
+              selection.enter().select('line').attr('stroke-dasharray', '4');
+              selection.enter().select('g.left-handle').append('text').attr('x', 5).attr('y', -5);
+              selection.enter().select('g.right-handle').remove();
+              // This data-dependent label needs to update on redraw, not just on enter.
+              selection.select('g.left-handle text').text(d => d.name + ': ' + d3.format('$.1f')(d.value) + 'M');
+          });
+      const multiPlot = fc.seriesSvgMulti()
+          .series([bar, boundLine])
+          .mapping((data, i, series) => series[i] === bar ? data.sales : data.targets);
       const fcChart = fc.chartCartesian(d3.scaleBand(), d3.scaleLinear())
           .chartLabel('2019 Cumulative Sales')
           .xDomain(data.sales.map(d => d.month))
-          .yDomain(yExtent(data.sales))
           .xPadding(0.2)
+          .yDomain(yExtent(data.sales))
           .yTicks(5, valueFormatter)
           .yLabel('Sales (millions)')
-          .decorate(el => el.select('.y-label').style('font-size', '0.75rem'))
           .yNice()
-          .svgPlotArea(bar);
-      d3.select('.fc').datum(data.sales).call(fcChart);
-      // end
+          .decorate(el => el.select('.y-label').style('font-size', '0.75rem'))
+          .svgPlotArea(multiPlot);
+      d3.select('.fc').datum(data).call(fcChart);
+      // end d3fc
   </script>
 </body>
 </html>
