@@ -34,9 +34,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@d3fc/d3fc-chart@npm:^5.0.6":
-  version: 5.0.6
-  resolution: "@d3fc/d3fc-chart@npm:5.0.6"
+"@d3fc/d3fc-chart@npm:^5.0.7":
+  version: 5.0.7
+  resolution: "@d3fc/d3fc-chart@npm:5.0.7"
   dependencies:
     "@d3fc/d3fc-axis": ^3.0.5
     "@d3fc/d3fc-data-join": ^6.0.3
@@ -46,7 +46,7 @@ __metadata:
   peerDependencies:
     d3-scale: "*"
     d3-selection: "*"
-  checksum: 1bed1ec107e7622e1f732c9f0ace44eb50d7606e051d5ef1dc398ecc08711a5c41ad2a55a7f7884a58a6ac82cb448dce0ad183a5e3920081f1af7daff9746536
+  checksum: edf6f510f84073aa3735a425e62f8f109bf8380a03366a4bd6f5da57a67cb18ab883ebb28ab66329a887a682686e7600063b2b683c16611496872229ab28f706
   languageName: node
   linkType: hard
 
@@ -1476,7 +1476,7 @@ __metadata:
   resolution: "d3-vs-fc@workspace:."
   dependencies:
     "@d3fc/d3fc-annotation": ^3.0.11
-    "@d3fc/d3fc-chart": ^5.0.6
+    "@d3fc/d3fc-chart": ^5.0.7
     "@d3fc/d3fc-element": ^6.1.2
     "@d3fc/d3fc-extent": ^4.0.2
     "@d3fc/d3fc-random-data": ^4.0.1

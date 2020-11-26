@@ -35,11 +35,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@d3fc/d3fc-axis",
-        "virtual:9a5dc251d3ed01e1017834bb9b7077c6e91636e361a5ad37f6b9896d9b78d592e56edb9c19019faa8366f5e3da667fcd8f676d9f11a088c84722c60d8ee0fbe9#npm:3.0.5"
+        "virtual:f30a76c708e47ccbfd8eabd17eee8d3dd1415137a43dff97634eec7c91e2785cda40e7283a617f1fe1f88841e77cbca876827a92bdbbc723c306ba07b8310f1a#npm:3.0.5"
       ],
       [
         "@d3fc/d3fc-chart",
-        "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.6"
+        "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.7"
       ],
       [
         "@d3fc/d3fc-data-join",
@@ -2114,7 +2114,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@d3fc/d3fc-annotation", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:3.0.11"],
-            ["@d3fc/d3fc-chart", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.6"],
+            ["@d3fc/d3fc-chart", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.7"],
             ["@d3fc/d3fc-element", "npm:6.1.2"],
             ["@d3fc/d3fc-extent", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.0.2"],
             ["@d3fc/d3fc-random-data", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.0.1"],
@@ -2155,10 +2155,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@d3fc/d3fc-axis", [
-        ["virtual:9a5dc251d3ed01e1017834bb9b7077c6e91636e361a5ad37f6b9896d9b78d592e56edb9c19019faa8366f5e3da667fcd8f676d9f11a088c84722c60d8ee0fbe9#npm:3.0.5", {
-          "packageLocation": "./.yarn/$$virtual/@d3fc-d3fc-axis-virtual-8fc2039b7f/0/cache/@d3fc-d3fc-axis-npm-3.0.5-6415daebbf-debfc74a2c.zip/node_modules/@d3fc/d3fc-axis/",
+        ["virtual:f30a76c708e47ccbfd8eabd17eee8d3dd1415137a43dff97634eec7c91e2785cda40e7283a617f1fe1f88841e77cbca876827a92bdbbc723c306ba07b8310f1a#npm:3.0.5", {
+          "packageLocation": "./.yarn/$$virtual/@d3fc-d3fc-axis-virtual-647c523c82/0/cache/@d3fc-d3fc-axis-npm-3.0.5-6415daebbf-debfc74a2c.zip/node_modules/@d3fc/d3fc-axis/",
           "packageDependencies": [
-            ["@d3fc/d3fc-axis", "virtual:9a5dc251d3ed01e1017834bb9b7077c6e91636e361a5ad37f6b9896d9b78d592e56edb9c19019faa8366f5e3da667fcd8f676d9f11a088c84722c60d8ee0fbe9#npm:3.0.5"],
+            ["@d3fc/d3fc-axis", "virtual:f30a76c708e47ccbfd8eabd17eee8d3dd1415137a43dff97634eec7c91e2785cda40e7283a617f1fe1f88841e77cbca876827a92bdbbc723c306ba07b8310f1a#npm:3.0.5"],
             ["@d3fc/d3fc-data-join", "virtual:078bdb5e1d802562c6e8f76f3fbd1fa6bf19a44374f50fdc957963b1aa1132e58500929d976a999eb0c76037d09afe917f9e3bd8c2b10f1cc0b03c186d7b91dd#npm:6.0.3"],
             ["@d3fc/d3fc-rebind", "npm:6.0.1"],
             ["@types/d3-scale", null],
@@ -2180,11 +2180,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@d3fc/d3fc-chart", [
-        ["virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.6", {
-          "packageLocation": "./.yarn/$$virtual/@d3fc-d3fc-chart-virtual-9a5dc251d3/0/cache/@d3fc-d3fc-chart-npm-5.0.6-70c84061cb-1bed1ec107.zip/node_modules/@d3fc/d3fc-chart/",
+        ["virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.7", {
+          "packageLocation": "./.yarn/$$virtual/@d3fc-d3fc-chart-virtual-f30a76c708/0/cache/@d3fc-d3fc-chart-npm-5.0.7-b52e9b8f0b-edf6f510f8.zip/node_modules/@d3fc/d3fc-chart/",
           "packageDependencies": [
-            ["@d3fc/d3fc-chart", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.6"],
-            ["@d3fc/d3fc-axis", "virtual:9a5dc251d3ed01e1017834bb9b7077c6e91636e361a5ad37f6b9896d9b78d592e56edb9c19019faa8366f5e3da667fcd8f676d9f11a088c84722c60d8ee0fbe9#npm:3.0.5"],
+            ["@d3fc/d3fc-chart", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.7"],
+            ["@d3fc/d3fc-axis", "virtual:f30a76c708e47ccbfd8eabd17eee8d3dd1415137a43dff97634eec7c91e2785cda40e7283a617f1fe1f88841e77cbca876827a92bdbbc723c306ba07b8310f1a#npm:3.0.5"],
             ["@d3fc/d3fc-data-join", "virtual:078bdb5e1d802562c6e8f76f3fbd1fa6bf19a44374f50fdc957963b1aa1132e58500929d976a999eb0c76037d09afe917f9e3bd8c2b10f1cc0b03c186d7b91dd#npm:6.0.3"],
             ["@d3fc/d3fc-element", "npm:6.1.2"],
             ["@d3fc/d3fc-rebind", "npm:6.0.1"],
@@ -3937,7 +3937,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["d3-vs-fc", "workspace:."],
             ["@d3fc/d3fc-annotation", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:3.0.11"],
-            ["@d3fc/d3fc-chart", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.6"],
+            ["@d3fc/d3fc-chart", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.7"],
             ["@d3fc/d3fc-element", "npm:6.1.2"],
             ["@d3fc/d3fc-extent", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.0.2"],
             ["@d3fc/d3fc-random-data", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.0.1"],

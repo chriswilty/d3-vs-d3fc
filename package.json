@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@d3fc/d3fc-annotation": "^3.0.11",
-    "@d3fc/d3fc-chart": "^5.0.6",
+    "@d3fc/d3fc-chart": "^5.0.7",
     "@d3fc/d3fc-element": "^6.1.2",
     "@d3fc/d3fc-extent": "^4.0.2",
     "@d3fc/d3fc-random-data": "^4.0.1",

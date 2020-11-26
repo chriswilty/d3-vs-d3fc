@@ -21,5 +21,12 @@ const data = {
     }))
 };
 
+// TODO
+//  - Load text code from script files
+//  - Place in boxes beneath charts
+//  - Poss. toggle between code and chart content?
+
 d3.select('.d3').datum(data).call(d3BarChart);
 d3.select('.fc').datum(data).call(fcBarChart);
+
+window.addEventListener('resize', () => d3.select('.d3').datum(data).call(d3BarChart));
