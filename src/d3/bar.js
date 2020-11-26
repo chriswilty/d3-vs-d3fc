@@ -1,6 +1,4 @@
-import { max } from 'd3-array';
-import { axisBottom, axisRight } from 'd3-axis';
-import { scaleBand, scaleLinear } from 'd3-scale';
+import * as d3 from 'd3';
 import { annotationFormatter, barColour, dateFormatter, moneyFormatter } from 'src/formatters';
 
 //start
@@ -11,25 +9,25 @@ const d3BarChart = selection => {
     const margin = { top: 30, right: 60, bottom: 50, left: 16 };
     const fillColour = barColour(targets);
 
-    const xScale = scaleBand()
+    const xScale = d3.scaleBand()
         .domain(sales.map(d => d.date))
         .rangeRound([margin.left, width - margin.right])
         .paddingInner(0.2)
         .paddingOuter(0.1);
 
-    const yScale = scaleLinear()
-        .domain([0, max(sales, d => d.value) * 1.2])
+    const yScale = d3.scaleLinear()
+        .domain([0, d3.max(sales, d => d.value) * 1.2])
         .nice()
         .range([height - margin.bottom, margin.top]);
 
     const xAxis = g => g
         .attr('transform', `translate(0, ${height - margin.bottom})`)
-        .call(axisBottom(xScale).tickFormat(dateFormatter).tickSizeOuter(6))
+        .call(d3.axisBottom(xScale).tickFormat(dateFormatter).tickSizeOuter(6))
         .call(g => g.select('.domain').attr('stroke-width', '1.5'));
 
     const yAxis = g => g
         .attr('transform', `translate(${width - margin.right}, 0)`)
-        .call(axisRight(yScale).ticks(5, moneyFormatter))
+        .call(d3.axisRight(yScale).ticks(5, moneyFormatter))
         .call(g => g.select('.domain').attr('stroke-width', '1.5'))
         .call(g => g.append('text')
             .attr('x', margin.right + 5)

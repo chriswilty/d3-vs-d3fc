@@ -1,4 +1,4 @@
-import { scaleBand, scaleLinear } from 'd3-scale';
+import * as d3 from 'd3';
 import { annotationSvgLine } from '@d3fc/d3fc-annotation';
 import { chartCartesian } from '@d3fc/d3fc-chart';
 import '@d3fc/d3fc-element';
@@ -43,7 +43,7 @@ const fcBarChart = selection => {
         .series([bar, annotationLine])
         .mapping((data, i, series) => series[i] === annotationLine ? data.targets : data.sales);
 
-    const chart = chartCartesian(scaleBand(), scaleLinear())
+    const chart = chartCartesian(d3.scaleBand(), d3.scaleLinear())
         .chartLabel('2019 Cumulative Sales')
         .xDomain(sales.map(d => d.date))
         .xTickFormat(dateFormatter)

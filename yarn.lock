@@ -34,21 +34,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@d3fc/d3fc-brush@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@d3fc/d3fc-brush@npm:3.0.3"
-  dependencies:
-    "@d3fc/d3fc-data-join": ^6.0.3
-    "@d3fc/d3fc-rebind": ^6.0.1
-  peerDependencies:
-    d3-brush: "*"
-    d3-dispatch: "*"
-    d3-scale: "*"
-    d3-selection: "*"
-  checksum: 925585df362581287eab7c2746061e72cb5d56dd163a2868b321e12ff55495e1f680484f6ca8bd99edf6177f65e48654cc85ba701e4562e776fc58195c2f1a69
-  languageName: node
-  linkType: hard
-
 "@d3fc/d3fc-chart@npm:^5.0.6":
   version: 5.0.6
   resolution: "@d3fc/d3fc-chart@npm:5.0.6"
@@ -74,18 +59,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@d3fc/d3fc-discontinuous-scale@npm:^4.0.1":
-  version: 4.0.2
-  resolution: "@d3fc/d3fc-discontinuous-scale@npm:4.0.2"
-  dependencies:
-    "@d3fc/d3fc-rebind": ^6.0.1
-  peerDependencies:
-    d3-scale: "*"
-    d3-time: "*"
-  checksum: d7fa12d954c2a93054ae59f29962db1abad74b4bcf7d7da941485f91f8c668b14b89cc6a2fc9b524854dd345e1a88548f94d3458596a09a0985e26a74edb9fc6
-  languageName: node
-  linkType: hard
-
 "@d3fc/d3fc-element@npm:^6.1.2":
   version: 6.1.2
   resolution: "@d3fc/d3fc-element@npm:6.1.2"
@@ -99,48 +72,6 @@ __metadata:
   peerDependencies:
     d3-array: "*"
   checksum: 4998e652406607c513861e3b347e610fe09f6f932668f939c6bccdad43f1eaad993d44d79e43f72abc5710c853e7aaa41b1f71e60fa64cfccc32c15a4dbda920
-  languageName: node
-  linkType: hard
-
-"@d3fc/d3fc-financial-feed@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "@d3fc/d3fc-financial-feed@npm:7.0.1"
-  peerDependencies:
-    d3-fetch: "*"
-  checksum: e416730932d023a3e3517460dfb9e88cd013ede5b5d91a3efc667a82e41b529499d35ac2ab8e2a48acc232f3c8f45432dd0d30d79740b39f5bc6c84dc8ba089a
-  languageName: node
-  linkType: hard
-
-"@d3fc/d3fc-group@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@d3fc/d3fc-group@npm:3.0.1"
-  checksum: 04bb0228677091e45a550bad041c25bcb5d3111fa8512ff465f5ff9de8a95c278c0115b22da6274874eb59bb1e514734e78a8d79421b10adf22235b234457905
-  languageName: node
-  linkType: hard
-
-"@d3fc/d3fc-label-layout@npm:^7.0.3":
-  version: 7.0.3
-  resolution: "@d3fc/d3fc-label-layout@npm:7.0.3"
-  dependencies:
-    "@d3fc/d3fc-data-join": ^6.0.3
-    "@d3fc/d3fc-rebind": ^6.0.1
-  peerDependencies:
-    d3-array: "*"
-    d3-scale: "*"
-    d3-selection: "*"
-  checksum: 4368067ebd0f4225daffe7e1a2cea8dad8dfd590ce417f74baf535e16c7655c76fabc825b049879274416f83a25c33c5ee6c65728b11968c0e215f118417f756
-  languageName: node
-  linkType: hard
-
-"@d3fc/d3fc-pointer@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "@d3fc/d3fc-pointer@npm:3.0.2"
-  dependencies:
-    "@d3fc/d3fc-rebind": ^6.0.1
-  peerDependencies:
-    d3-dispatch: "*"
-    d3-selection: "*"
-  checksum: 685f2d49adaaf4185d207729e99fbb9bcd145172023b6cba76c1ad85233710086596c5543e5f8f96718c4c1e0a1277759416b616ebad96a149ffab342156cfae
   languageName: node
   linkType: hard
 
@@ -160,17 +91,6 @@ __metadata:
   version: 6.0.1
   resolution: "@d3fc/d3fc-rebind@npm:6.0.1"
   checksum: affaaffc01894f22220d021d762d1c22027de5acdde6e3fddac4f1defc5c39ce64ee3ad7084fbf882d8eb4d936e95e1fd634b164cf59a686b5cf90bebf12ce0f
-  languageName: node
-  linkType: hard
-
-"@d3fc/d3fc-sample@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "@d3fc/d3fc-sample@npm:5.0.1"
-  dependencies:
-    "@d3fc/d3fc-rebind": ^6.0.1
-  peerDependencies:
-    d3-array: "*"
-  checksum: b76238d74ae9df711499b879f94ed8f69f37508005c5a1a96f5be76912202dedaa643874708e1896022256caf9482f07324544dc5916e01d303766fe2122a2f0
   languageName: node
   linkType: hard
 
@@ -201,17 +121,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@d3fc/d3fc-technical-indicator@npm:^8.0.1":
-  version: 8.0.1
-  resolution: "@d3fc/d3fc-technical-indicator@npm:8.0.1"
-  dependencies:
-    "@d3fc/d3fc-rebind": ^6.0.1
-  peerDependencies:
-    d3-array: "*"
-  checksum: 37f29d13fde37e2582188430b592e9a7feaf29a82b0e9b9848b08766fc1171fc96528b9ed8fcee6c75d4b855115d57b18e98a61a8413f06b11d3f4aa80b4e435
-  languageName: node
-  linkType: hard
-
 "@d3fc/d3fc-webgl@npm:^3.1.0":
   version: 3.1.0
   resolution: "@d3fc/d3fc-webgl@npm:3.1.0"
@@ -221,19 +130,6 @@ __metadata:
     d3-scale: "*"
     d3-shape: "*"
   checksum: 0aa947e63afb7b6b3fe0f4faa148ed4dcd9a5b5b6b37846b04b789c1e953e17170031a23a54864d90275ff5d4984f2097a1f0bd9c4a563b280f900bab4666b04
-  languageName: node
-  linkType: hard
-
-"@d3fc/d3fc-zoom@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "@d3fc/d3fc-zoom@npm:1.1.1"
-  dependencies:
-    "@d3fc/d3fc-rebind": ^6.0.1
-  peerDependencies:
-    d3-dispatch: "*"
-    d3-selection: "*"
-    d3-zoom: "*"
-  checksum: a27c75cedd7dcd6d9afff43b02d12b400fe6d033d1abbdce0fb45cf5e56581be768f5e609a7886a7109cd549e885c913142a37515b1b529404687004d8439c21
   languageName: node
   linkType: hard
 
@@ -1587,7 +1483,6 @@ __metadata:
     "@d3fc/d3fc-series": ^6.0.4
     css-loader: ^5.0.1
     d3: ^6.2.0
-    d3fc: ^15.1.1
     pnp-webpack-plugin: ^1.6.4
     style-loader: ^2.0.0
     webpack: ^5.6.0
@@ -1645,34 +1540,6 @@ __metadata:
     d3-transition: 2
     d3-zoom: 2
   checksum: 31e41a0bf557547dd12ca14f6104e3d9b232ccec006ed09a7d79d5738acd062cd3a92fed61b58fafa85fb9eaf04956e49406f849839526184d016fdb8c8e5490
-  languageName: node
-  linkType: hard
-
-"d3fc@npm:^15.1.1":
-  version: 15.1.1
-  resolution: "d3fc@npm:15.1.1"
-  dependencies:
-    "@d3fc/d3fc-annotation": ^3.0.11
-    "@d3fc/d3fc-axis": ^3.0.5
-    "@d3fc/d3fc-brush": ^3.0.3
-    "@d3fc/d3fc-chart": ^5.0.6
-    "@d3fc/d3fc-data-join": ^6.0.3
-    "@d3fc/d3fc-discontinuous-scale": ^4.0.1
-    "@d3fc/d3fc-element": ^6.1.2
-    "@d3fc/d3fc-extent": ^4.0.2
-    "@d3fc/d3fc-financial-feed": ^7.0.1
-    "@d3fc/d3fc-group": ^3.0.1
-    "@d3fc/d3fc-label-layout": ^7.0.3
-    "@d3fc/d3fc-pointer": ^3.0.2
-    "@d3fc/d3fc-random-data": ^4.0.1
-    "@d3fc/d3fc-rebind": ^6.0.1
-    "@d3fc/d3fc-sample": ^5.0.1
-    "@d3fc/d3fc-series": ^6.0.4
-    "@d3fc/d3fc-shape": ^6.0.1
-    "@d3fc/d3fc-technical-indicator": ^8.0.1
-    "@d3fc/d3fc-webgl": ^3.1.0
-    "@d3fc/d3fc-zoom": ^1.1.1
-  checksum: 5b8e79170e5a1939783482e58e84cba9b5f71e13bbbf3b0b734d698c3c056c1a1aaf5917b3fb1388377be933855ca3efdc65c755d9726089179052f86f5d370d
   languageName: node
   linkType: hard
 
