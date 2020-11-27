@@ -1626,6 +1626,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.4.0"
       ],
       [
+        "raw-loader",
+        "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.0.2"
+      ],
+      [
         "readable-stream",
         "npm:2.3.7"
       ],
@@ -2122,6 +2126,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["css-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.1"],
             ["d3", "npm:6.2.0"],
             ["pnp-webpack-plugin", "npm:1.6.4"],
+            ["raw-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.0.2"],
             ["style-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:2.0.0"],
             ["webpack", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.6.0"],
             ["webpack-cli", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.2.0"],
@@ -3945,6 +3950,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["css-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.1"],
             ["d3", "npm:6.2.0"],
             ["pnp-webpack-plugin", "npm:1.6.4"],
+            ["raw-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.0.2"],
             ["style-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:2.0.0"],
             ["webpack", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.6.0"],
             ["webpack-cli", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.2.0"],
@@ -6945,6 +6951,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["http-errors", "npm:1.7.2"],
             ["iconv-lite", "npm:0.4.24"],
             ["unpipe", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["raw-loader", [
+        ["virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.0.2", {
+          "packageLocation": "./.yarn/$$virtual/raw-loader-virtual-37927d47b0/0/cache/raw-loader-npm-4.0.2-94da6c700d-1a08968df5.zip/node_modules/raw-loader/",
+          "packageDependencies": [
+            ["raw-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.0.2"],
+            ["@types/webpack", null],
+            ["loader-utils", "npm:2.0.0"],
+            ["schema-utils", "npm:3.0.0"],
+            ["webpack", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.6.0"]
+          ],
+          "packagePeers": [
+            "@types/webpack",
+            "webpack"
           ],
           "linkType": "HARD",
         }]

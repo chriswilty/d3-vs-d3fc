@@ -13,17 +13,36 @@ body {
     align-items: stretch;
 }
 
-.d3, .fc {
+.d3,
+.fc {
     font-family: sans-serif;
-    margin: 16px;
+    min-width: 400px;
+    max-width: 600px;
+    height: max-content;
+    flex: 1 0 auto;
+}
+
+.d3 > *,
+.fc > * {
+    margin: 8px;
     border: 1px solid grey;
     border-radius: 4px;
     padding: 8px;
-    min-width: 400px;
-    max-width: 600px;
-    flex: 1 0 auto;
 }
-.d3 { margin-right: 8px; }
-.fc { margin-left: 8px; }
 
-.annotation-line, .y-label { font-size: 0.75rem; }
+.d3 > * { margin-right: 4px; }
+.fc > * { margin-left: 4px; }
+
+.chart {
+    height: 60vh;
+}
+
+.code {
+    font-family: monospace;
+    font-size: 0.75rem;
+    white-space: pre-wrap;
+}
+
+.annotation-line, .y-label {
+    font-size: 0.75rem;
+}

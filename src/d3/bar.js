@@ -6,7 +6,7 @@ const d3BarChart = selection => {
     const dateFormatter = d3.timeFormat('%b');
     const moneyFormatter = d3.format('$.0f');
     const annotationFormatter = ({ name, value }) => name + ': ' + d3.format('$.1f')(value) + 'M';
-    const barColour = d => (d.value >= (targets.find(t => t.name === 'low') || {}).value ? '#0c0' : 'inherit');
+    const barColour = d => (d.value >= targets.find(t => t.name === 'low').value ? '#0c0' : 'inherit');
 
     const width = parseInt(selection.style('width'));
     const height = parseInt(selection.style('height'));
