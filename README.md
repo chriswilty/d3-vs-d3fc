@@ -1,5 +1,7 @@
 # Building a bar chart: D3 vs D3FC
 
+**https://chriswilty.github.io/d3-vs-d3fc/**
+
 I must admit, I'd forgotten how convenient it is to build charts using
 [D3FC](https://d3fc.io/), until I revisited it recently to compare it with vanilla
 [D3](https://d3js.org/). One goal of D3FC was to provide a higher-level API than
