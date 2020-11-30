@@ -1,10 +1,40 @@
+:root {
+    --pad-s: 4px;
+    --pad-m: 8px;
+    --header-height: calc(var(--pad-m) + var(--pad-s) + 2rem);
+}
+
 body {
     margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body > * {
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: var(--pad-s) var(--pad-s) var(--pad-m);
+    z-index: 1;
+    background: linear-gradient(white, white 80%, transparent);
+    font-size: 1.25rem;
+    height: var(--header-height);
+}
+.title {
+    border-radius: var(--pad-s);
+    padding: var(--pad-s) var(--pad-m);
+    color: white;
+    background-color: grey;
 }
 
 .container {
     position: absolute;
-    top: 0;
+    top: var(--header-height);
     bottom: 0;
     left: 0;
     right: 0;
@@ -15,32 +45,33 @@ body {
 
 .d3,
 .fc {
-    font-family: sans-serif;
     min-width: 400px;
     max-width: 600px;
     height: max-content;
-    flex: 1 0 auto;
+    flex: 1 1 auto;
 }
 
 .d3 > *,
 .fc > * {
-    margin: 8px;
-    border: 1px solid grey;
-    border-radius: 4px;
-    padding: 8px;
+    margin: 0 var(--pad-s) var(--pad-m);
+    padding: var(--pad-m) var(--pad-s) var(--pad-s);
 }
-
-.d3 > * { margin-right: 4px; }
-.fc > * { margin-left: 4px; }
 
 .chart {
     height: 60vh;
+    border: 1px solid grey;
+    border-radius: var(--pad-s);
 }
-
 .code {
+    border: 1px dashed grey;
+    border-radius: var(--pad-s);
     font-family: monospace;
     font-size: 0.75rem;
-    white-space: pre-wrap;
+    white-space: break-spaces;
+}
+
+.fc .cartesian-chart {
+    grid-template-rows: minmax(1em,max-content) auto 1fr auto minmax(0em,max-content);
 }
 
 .annotation-line, .y-label {

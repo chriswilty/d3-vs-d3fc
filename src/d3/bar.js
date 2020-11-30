@@ -1,16 +1,13 @@
 import * as d3 from 'd3';
+import { dateFormatter, moneyFormatter, annotationFormatter, barColour } from 'src/formatters';
 
 const d3BarChart = selection => {
     const { sales, targets } = selection.datum();
 
-    const dateFormatter = d3.timeFormat('%b');
-    const moneyFormatter = d3.format('$.0f');
-    const annotationFormatter = ({ name, value }) => name + ': ' + d3.format('$.1f')(value) + 'M';
-    const barColour = d => (d.value >= targets.find(t => t.name === 'low').value ? '#0c0' : 'inherit');
-
     const width = parseInt(selection.style('width'));
     const height = parseInt(selection.style('height'));
-    const margin = { top: 30, right: 60, bottom: 50, left: 16 };
+    const margin = { top: 32, right: 64, bottom: 32, left: 16 };
+    const fillColour = barColour(targets);
 
     const xScale = d3.scaleBand()
         .domain(sales.map(d => d.date))
@@ -25,7 +22,9 @@ const d3BarChart = selection => {
 
     const xAxis = g => g
         .attr('transform', `translate(0, ${height - margin.bottom})`)
-        .call(d3.axisBottom(xScale).tickFormat(dateFormatter).tickSizeOuter(6))
+        .call(d3.axisBottom(xScale)
+            .tickFormat(dateFormatter)
+            .tickSizeOuter(6))
         .call(g => g.select('.domain').attr('stroke-width', '1.5'));
 
     const yAxis = g => g
@@ -37,12 +36,14 @@ const d3BarChart = selection => {
             .attr('y', (height) / 2)
             .attr('fill', 'currentColor')
             .attr('text-anchor', 'middle')
-            .attr('transform', `rotate(-90, ${margin.right - 5}, ${height / 2})`)
+            .attr('transform',
+                `rotate(-90, ${margin.right - 5}, ${height / 2})`)
             .classed('y-label', true)
             .text('Sales (millions)'));
 
     selection.select('svg').remove();
-    const svg = selection.append('svg').attr('viewBox', [0, 0, width, height]);
+    const svg = selection.append('svg')
+        .attr('viewBox', [0, 0, width, height]);
 
     svg.append('text')
         .attr('x', `${width / 2}`)
@@ -60,7 +61,7 @@ const d3BarChart = selection => {
         .attr('y', d => yScale(d.value))
         .attr('height', d => yScale(0) - yScale(d.value))
         .attr('width', xScale.bandwidth())
-        .attr('fill', barColour);
+        .attr('fill', fillColour);
 
     svg.append('g').call(xAxis);
     svg.append('g').call(yAxis);

@@ -3,7 +3,6 @@ import { randomGeometricBrownianMotion } from '@d3fc/d3fc-random-data';
 
 import d3BarChart from 'src/d3/bar';
 import fcBarChart from 'src/fc/bar';
-
 import d3Code from '!raw-loader!./d3/bar.js';
 import fcCode from '!raw-loader!./fc/bar.js';
 
@@ -25,10 +24,8 @@ const data = {
 };
 
 // TODO
-//  - Load text code from script files
-
-//  - Place in boxes beneath charts
-//  - Poss. toggle between code and chart content?
+//  - add another chart, e.g. line with area-fill, with toggle in header bar
+//  - add navigation between charts
 
 d3.select('.d3 > .chart').datum(data).call(d3BarChart);
 d3.select('.fc > .chart').datum(data).call(fcBarChart);
