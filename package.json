@@ -15,7 +15,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "start": "webpack serve --config webpack.dev.js",
-    "clean": "yarn dlx rimraf dist/*.js",
+    "clean": "yarn dlx rimraf docs/*.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
