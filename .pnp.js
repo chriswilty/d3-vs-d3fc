@@ -74,6 +74,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:33815a7cfef35ac891e63c352192416b45761e7bdee6fc2569665c1bd9c871040481af074e963ca129f9bb13d3dd3a15338166fc703f8e1c3835ae18d8588b31#npm:3.1.0"
       ],
       [
+        "@types/d3-selection",
+        "npm:1.0.10"
+      ],
+      [
         "@types/eslint",
         "npm:7.2.5"
       ],
@@ -526,6 +530,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.0.0"
       ],
       [
+        "d3-collection",
+        "npm:1.0.7"
+      ],
+      [
         "d3-color",
         "npm:2.0.0"
       ],
@@ -608,6 +616,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "d3-shape",
         "npm:2.0.0"
+      ],
+      [
+        "d3-svg-legend",
+        "npm:2.25.6"
       ],
       [
         "d3-time",
@@ -2125,6 +2137,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@d3fc/d3fc-series", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:6.0.4"],
             ["css-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.1"],
             ["d3", "npm:6.2.0"],
+            ["d3-svg-legend", "npm:2.25.6"],
             ["pnp-webpack-plugin", "npm:1.6.4"],
             ["raw-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.0.2"],
             ["style-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:2.0.0"],
@@ -2342,6 +2355,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/d3-shape",
             "d3-scale",
             "d3-shape"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/d3-selection", [
+        ["npm:1.0.10", {
+          "packageLocation": "./.yarn/cache/@types-d3-selection-npm-1.0.10-db52502e23-3dc5c942df.zip/node_modules/@types/d3-selection/",
+          "packageDependencies": [
+            ["@types/d3-selection", "npm:1.0.10"]
           ],
           "linkType": "HARD",
         }]
@@ -3637,6 +3659,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["d3-array", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/d3-array-npm-1.0.1-4d1303f344-5905ed5d50.zip/node_modules/d3-array/",
+          "packageDependencies": [
+            ["d3-array", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.8.0", {
           "packageLocation": "./.yarn/cache/d3-array-npm-2.8.0-51de3549ce-2b57f05d0c.zip/node_modules/d3-array/",
           "packageDependencies": [
@@ -3678,7 +3707,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["d3-collection", [
+        ["npm:1.0.7", {
+          "packageLocation": "./.yarn/cache/d3-collection-npm-1.0.7-3c04196100-c26d13e9bb.zip/node_modules/d3-collection/",
+          "packageDependencies": [
+            ["d3-collection", "npm:1.0.7"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["d3-color", [
+        ["npm:1.4.1", {
+          "packageLocation": "./.yarn/cache/d3-color-npm-1.4.1-cd6dccad72-a579fdc2f4.zip/node_modules/d3-color/",
+          "packageDependencies": [
+            ["d3-color", "npm:1.4.1"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/d3-color-npm-2.0.0-e7f04a5d87-637e111598.zip/node_modules/d3-color/",
           "packageDependencies": [
@@ -3708,6 +3753,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["d3-dispatch", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/d3-dispatch-npm-1.0.1-38d00794f4-b67d012274.zip/node_modules/d3-dispatch/",
+          "packageDependencies": [
+            ["d3-dispatch", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/d3-dispatch-npm-2.0.0-1417ab6cc8-6724fe8d32.zip/node_modules/d3-dispatch/",
           "packageDependencies": [
@@ -3740,6 +3792,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["d3-ease", [
+        ["npm:1.0.7", {
+          "packageLocation": "./.yarn/cache/d3-ease-npm-1.0.7-756ddc480a-c35f083c58.zip/node_modules/d3-ease/",
+          "packageDependencies": [
+            ["d3-ease", "npm:1.0.7"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/d3-ease-npm-2.0.0-b648d66f09-770df967fc.zip/node_modules/d3-ease/",
           "packageDependencies": [
@@ -3771,6 +3830,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["d3-format", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/d3-format-npm-1.0.2-0803bcd4fa-b9b27e4ea3.zip/node_modules/d3-format/",
+          "packageDependencies": [
+            ["d3-format", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/d3-format-npm-2.0.0-74628e435e-515b8c3c40.zip/node_modules/d3-format/",
           "packageDependencies": [
@@ -3799,6 +3865,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["d3-interpolate", [
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/d3-interpolate-npm-1.4.0-694efcdd27-beea08fb3a.zip/node_modules/d3-interpolate/",
+          "packageDependencies": [
+            ["d3-interpolate", "npm:1.4.0"],
+            ["d3-color", "npm:1.4.1"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.0.1", {
           "packageLocation": "./.yarn/cache/d3-interpolate-npm-2.0.1-7e198300b3-a996521ffa.zip/node_modules/d3-interpolate/",
           "packageDependencies": [
@@ -3845,6 +3919,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["d3-scale", [
+        ["npm:1.0.3", {
+          "packageLocation": "./.yarn/cache/d3-scale-npm-1.0.3-42e862c8a6-f06c186791.zip/node_modules/d3-scale/",
+          "packageDependencies": [
+            ["d3-scale", "npm:1.0.3"],
+            ["d3-array", "npm:1.0.1"],
+            ["d3-collection", "npm:1.0.7"],
+            ["d3-color", "npm:1.4.1"],
+            ["d3-format", "npm:1.0.2"],
+            ["d3-interpolate", "npm:1.4.0"],
+            ["d3-time", "npm:1.1.0"],
+            ["d3-time-format", "npm:2.3.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:3.2.3", {
           "packageLocation": "./.yarn/cache/d3-scale-npm-3.2.3-06ca6918ae-675a059241.zip/node_modules/d3-scale/",
           "packageDependencies": [
@@ -3870,6 +3958,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["d3-selection", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/d3-selection-npm-1.0.2-f8556c31f8-71c3c5ae5f.zip/node_modules/d3-selection/",
+          "packageDependencies": [
+            ["d3-selection", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/d3-selection-npm-2.0.0-b10bfedd78-9e6ef7ebf8.zip/node_modules/d3-selection/",
           "packageDependencies": [
@@ -3888,7 +3983,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["d3-svg-legend", [
+        ["npm:2.25.6", {
+          "packageLocation": "./.yarn/cache/d3-svg-legend-npm-2.25.6-760888c16a-4697432f5d.zip/node_modules/d3-svg-legend/",
+          "packageDependencies": [
+            ["d3-svg-legend", "npm:2.25.6"],
+            ["@types/d3-selection", "npm:1.0.10"],
+            ["d3-array", "npm:1.0.1"],
+            ["d3-dispatch", "npm:1.0.1"],
+            ["d3-format", "npm:1.0.2"],
+            ["d3-scale", "npm:1.0.3"],
+            ["d3-selection", "npm:1.0.2"],
+            ["d3-transition", "npm:1.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["d3-time", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/d3-time-npm-1.1.0-5df1aeb229-d083c2181b.zip/node_modules/d3-time/",
+          "packageDependencies": [
+            ["d3-time", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/d3-time-npm-2.0.0-4db6d17600-fe10d9acd6.zip/node_modules/d3-time/",
           "packageDependencies": [
@@ -3898,6 +4016,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["d3-time-format", [
+        ["npm:2.3.0", {
+          "packageLocation": "./.yarn/cache/d3-time-format-npm-2.3.0-df09741a0b-88fb8b9292.zip/node_modules/d3-time-format/",
+          "packageDependencies": [
+            ["d3-time-format", "npm:2.3.0"],
+            ["d3-time", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:3.0.0", {
           "packageLocation": "./.yarn/cache/d3-time-format-npm-3.0.0-0803464fb3-3e67e7eb5b.zip/node_modules/d3-time-format/",
           "packageDependencies": [
@@ -3908,6 +4034,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["d3-timer", [
+        ["npm:1.0.10", {
+          "packageLocation": "./.yarn/cache/d3-timer-npm-1.0.10-af1ad28ff9-e302132e1f.zip/node_modules/d3-timer/",
+          "packageDependencies": [
+            ["d3-timer", "npm:1.0.10"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/d3-timer-npm-2.0.0-590adf27a0-4e2ba2f02e.zip/node_modules/d3-timer/",
           "packageDependencies": [
@@ -3917,6 +4050,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["d3-transition", [
+        ["npm:1.0.3", {
+          "packageLocation": "./.yarn/cache/d3-transition-npm-1.0.3-b0a018e5cc-5b72c75bdf.zip/node_modules/d3-transition/",
+          "packageDependencies": [
+            ["d3-transition", "npm:1.0.3"],
+            ["d3-color", "npm:1.4.1"],
+            ["d3-dispatch", "npm:1.0.1"],
+            ["d3-ease", "npm:1.0.7"],
+            ["d3-interpolate", "npm:1.4.0"],
+            ["d3-selection", "npm:1.0.2"],
+            ["d3-timer", "npm:1.0.10"]
+          ],
+          "linkType": "HARD",
+        }],
         ["virtual:b62dc5c37cc2a6e08c3bc407e2d0c181df9b367828b2f77dc64d754bfd8ec0714f39b5a7e302c70254d6824209e4e5f3332c0869c6c5c15596379170d9feb045#npm:2.0.0", {
           "packageLocation": "./.yarn/$$virtual/d3-transition-virtual-e20bc0a565/0/cache/d3-transition-npm-2.0.0-580e508660-a46e454e88.zip/node_modules/d3-transition/",
           "packageDependencies": [
@@ -3949,6 +4095,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@d3fc/d3fc-series", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:6.0.4"],
             ["css-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:5.0.1"],
             ["d3", "npm:6.2.0"],
+            ["d3-svg-legend", "npm:2.25.6"],
             ["pnp-webpack-plugin", "npm:1.6.4"],
             ["raw-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:4.0.2"],
             ["style-loader", "virtual:412b123c1357f153f80e59ada0d844e991c4ba63287a6918596fe04f4ca4566f0725139d42de9203644d369db8212e157a9a5bcdbfe2f7c1493c7ee911880c9f#npm:2.0.0"],

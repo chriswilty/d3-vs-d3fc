@@ -73,7 +73,22 @@ body > * {
 .fc .cartesian-chart {
     grid-template-rows: minmax(1em,max-content) auto 1fr auto minmax(0em,max-content);
 }
+d3fc-group.cartesian-chart > d3fc-svg.plot-area {
+    overflow: visible;
+}
 
-.annotation-line, .y-label {
+.annotation-line,
+.x-label,
+.y-label {
+    font-size: 0.75rem;
+}
+
+.legend {
+    grid-column: 3;
+    grid-row: 3;
+    align-self: end;
+    justify-self: end;
+    width: 8em;
+    height: 7em;
     font-size: 0.75rem;
 }

@@ -25,7 +25,8 @@
     "@d3fc/d3fc-extent": "^4.0.2",
     "@d3fc/d3fc-random-data": "^4.0.1",
     "@d3fc/d3fc-series": "^6.0.4",
-    "d3": "^6.2.0"
+    "d3": "^6.2.0",
+    "d3-svg-legend": "^2.25.6"
   },
   "devDependencies": {
     "css-loader": "^5.0.1",
