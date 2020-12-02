@@ -8,6 +8,6 @@ import 'src/styles.css';
 //  - add buttons in header for switching between charts
 //  - add navigation between charts
 
-let cleanupFunction = drawBars();
+let cleanupFunction = /*drawBars();*/
 
 /* cleanupFunction = */ drawBubbles();

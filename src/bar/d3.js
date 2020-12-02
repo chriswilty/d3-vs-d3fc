@@ -17,8 +17,8 @@ const d3BarChart = selection => {
 
     const yScale = d3.scaleLinear()
         .domain([0, d3.max(sales, d => d.value) * 1.1])
-        .nice()
-        .range([height - margin.bottom, margin.top]);
+        .range([height - margin.bottom, margin.top])
+        .nice();
 
     const xAxis = g => g
         .attr('transform', `translate(0, ${height - margin.bottom})`)

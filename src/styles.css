@@ -84,11 +84,13 @@ d3fc-group.cartesian-chart > d3fc-svg.plot-area {
 }
 
 .legend {
+    width: 8em;
+    height: 7em;
+    font-size: 0.75rem;
+}
+.fc .legend {
     grid-column: 3;
     grid-row: 3;
     align-self: end;
     justify-self: end;
-    width: 8em;
-    height: 7em;
-    font-size: 0.75rem;
 }
