@@ -1,0 +1,137 @@
+:root {
+    --pad-s: 4px;
+    --pad-m: 8px;
+    --header-height: calc(2 * var(--pad-m) + 2rem);
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body > * {
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 800px;
+    max-width: 1200px;
+    padding: var(--pad-s);
+    z-index: 1;
+    background: linear-gradient(white, white 80%, transparent);
+    height: var(--header-height);
+}
+.header > button {
+    margin-right: var(--pad-s);
+    outline: none;
+    border: 2px solid #888;
+    border-radius: var(--pad-s);
+    padding: var(--pad-s) var(--pad-m);
+    color: #eee;
+    background-color: #aaa;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.header > button[disabled],
+.header > button[disabled]:hover {
+    border-color: #666;
+    background-color: #888;
+    color: white;
+    cursor: default;
+}
+.header > button:hover,
+.header > button:focus,
+.header > button:active {
+    border-color: #666;
+    background-color: #aaa;
+    color: white;
+}
+
+.container {
+    position: absolute;
+    top: calc(var(--header-height) - var(--pad-s));
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container > .d3,
+.container > .fc {
+    min-width: 400px;
+    max-width: 600px;
+    height: max-content;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.container > * > .label {
+    position: absolute;
+    top: calc(var(--pad-s) / 2);
+    border: 1px solid #888;
+    border-radius: var(--pad-s);
+    padding: var(--pad-s) var(--pad-m);
+    color: #888;
+    background-color: #eee;
+}
+.container > .d3 > .label {
+    right: calc(1.5 * var(--pad-s));
+}
+.container > .fc > .label {
+    left: calc(1.5 * var(--pad-s));
+}
+
+.container > .d3 > .chart,
+.container > .d3 > .code,
+.container > .fc > .chart,
+.container > .fc > .code {
+    margin: 0 var(--pad-s) var(--pad-m);
+    padding: var(--pad-m) var(--pad-s) var(--pad-s);
+}
+
+.chart {
+    height: 60vh;
+    border: 1px solid #888;
+    border-radius: var(--pad-s);
+}
+.code {
+    border: 1px dashed #888;
+    border-radius: var(--pad-s);
+    font-family: monospace;
+    font-size: 0.75rem;
+    white-space: break-spaces;
+}
+
+.container > .fc .cartesian-chart {
+    grid-template-rows: minmax(1em,max-content) auto 1fr auto minmax(0em,max-content);
+}
+d3fc-group.cartesian-chart > d3fc-svg.plot-area {
+    overflow: visible;
+}
+
+.annotation-line,
+.x-label,
+.y-label {
+    font-size: 0.75rem;
+}
+
+.legend {
+    width: 8em;
+    height: 7em;
+    font-size: 0.75rem;
+    cursor: default;
+}
+.container > .fc .legend {
+    grid-column: 3;
+    grid-row: 3;
+    align-self: end;
+    justify-self: end;
+}

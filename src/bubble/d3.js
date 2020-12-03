@@ -92,7 +92,9 @@ const d3BubbleChart = selection => {
     svg.append('g')
         .classed('legend', true)
         .attr('transform', `translate(${width - 110}, ${height - 130})`)
-        .call(legend);
+        .call(legend)
+        .append('title')
+        .text('Bubble size proportional to deaths per million');
 };
 
 export default d3BubbleChart;

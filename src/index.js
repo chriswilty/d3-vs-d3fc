@@ -1,13 +1,19 @@
+import * as d3 from 'd3';
+
 import drawBars from 'src/bar';
 import drawBubbles from 'src/bubble';
 
-import 'src/styles.css';
+// TODO: add navigation between charts?
+const clickHandler = drawFunction => event => {
+    cleanupFunction && cleanupFunction();
 
-// TODO
-//  - bubble chart in D3
-//  - add buttons in header for switching between charts
-//  - add navigation between charts
+    d3.selectAll('button').attr('disabled', null);
 
-let cleanupFunction = /*drawBars();*/
+    event.target.setAttribute('disabled', '');
+    cleanupFunction = drawFunction();
+};
 
-/* cleanupFunction = */ drawBubbles();
+let cleanupFunction = drawBars();
+
+d3.select('button.bars').attr('disabled', true).on('click', clickHandler(drawBars));
+d3.select('button.bubbles').on('click', clickHandler(drawBubbles));

@@ -57,7 +57,9 @@ const fcBubbleChart = selection => {
                 .append('d3fc-svg')
                 .classed('legend', true)
                 .select('svg')
-                .call(legend);
+                .call(legend)
+                .append('title')
+                .text('Bubble area proportional to deaths per million');
         });
 
     selection.call(chart);
